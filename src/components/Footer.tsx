@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 //@ts-ignore
 import logo from '../assets/images/tesla-9-logo.png'
+//@ts-ignore
 import FooterLogo from '../assets/images/FooterLogo.png'
 
 function Footer() {

@@ -1,6 +1,10 @@
+//@ts-ignore
 import location from '../images/Location.jpg'
+//@ts-ignore
 import event from '../images/Event.jpg'
+//@ts-ignore
 import event2 from '../images/Event2.webp'
+//@ts-ignore
 import looking from '../images/Looking.jpg'
 
 

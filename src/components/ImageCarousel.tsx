@@ -11,6 +11,13 @@ interface Props {
 
 function ImageCarousel(props: Props) {
     const carouselInfo = props.carouselInfo
+    console.log(carouselInfo[0]['image']);
+
+    const OutputValue = (object:any):string => {
+        //@ts-ignore
+        return Object.values(object)
+    }
+    
     return (
         <>
         <Swiper
@@ -28,7 +35,7 @@ function ImageCarousel(props: Props) {
             {carouselInfo.map((slideinfo:any) => (
             <SwiperSlide>
                 <article className='article'>
-                    <img className='image' src={Object.values(slideinfo['image'])} alt="background" />
+                    <img className='image' src={OutputValue(slideinfo['image'])} alt="background" />
                     <div className='header text-center text-slate-100 bg-black bg-opacity-75 py-2'>
                         <div id='HeaderText'>
                             {slideinfo['title']}

@@ -7,7 +7,9 @@ function Cart() {
 
   let sumcost = 0
   const [, updateState] = React.useState();
+  //@ts-ignore
   const forceUpdate = React.useCallback(() => updateState({}), []);
+  //@ts-ignore
   const { bookData, getData } = useGetData();
 
   for(let i=0; i<bookData.length; i++){
@@ -51,7 +53,7 @@ function Cart() {
                 <div id="ParagraphText">ISBN: {book['isbn']}</div>
                 <div id="ParagraphText">Cost: ${book['price']}</div>
 
-                <HardcoverSwitch hardcover={book['hardcover']} onChange={(event:React.ChangeEvent) => updateCover(event.target.checked, book)}/>
+                <HardcoverSwitch hardcover={book['hardcover']} onChange={(event:React.ChangeEvent) => updateCover((event.target as HTMLInputElement).checked, book)}/>
                 <div/>
 
                 <button className= 'bg-purple-600 text-purple-100 rounded border hover:bg-purple-100 hover:text-gray-800 hover:border-purple-300 h-12 transition duration-500 w-40' onClick={()=>RemoveFromCart(book['id'])}>

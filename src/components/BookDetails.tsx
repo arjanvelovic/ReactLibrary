@@ -10,8 +10,10 @@ function BookDetails() {
     const params = useParams()
     const bookId = params.bookId
 
+    //@ts-ignore
     const { bookData, getData } = useGetDataSingle(bookId);
 
+    //@ts-ignore
     const hardcover = bookData['hardcover'] === true ? <div id="ParagraphText">Hard Cover</div> : <div id="ParagraphText"> Paper Back</div>
 
     const [open, setOpen] = React.useState(false);
